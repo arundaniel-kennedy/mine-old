@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Marck+Script|Playball|Qwigley&display=swap');
+
+/*
+font-family: 'Playball', cursive;
+font-family: 'Ruthie', cursive;
+font-family: 'Qwigley', cursive;
+font-family: 'Marck Script', cursive;
+*/
+
+html,body{
+  background-image: url("../assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  font-size: 1.15rem;
+  scroll-behavior: smooth;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.pushdown{
+  margin-top: 19vh;
+}
+
+@media screen and (max-width: 600px) {
+  .pushdown{
+    margin-top: 35vh;
+  }
+}
+
+.pushdownfurther{
+  margin-top: 40vh;
+}
+
+.display-1{
+  font-family: 'Qwigley', cursive;
+  font-size:22vw;
+}
+
+h3,h4{
+  font-family: 'Marck Script', cursive;
+  font-size:4rem;
+}
+
+h5{
+  font-family: 'Playball', cursive;
+  font-size: 2rem;
+}
+
+.st{
+  color:darkred;
+  text-decoration: none;
+}
+
+.st:hover{
+  color: crimson;
+  text-decoration: underline;
+}
+
+.live{
+  color: white;
+  background-color:firebrick;
+  border-radius: 5px;
+  width: 55px;
+  text-align: center;
+}
+
+.ongoing{
+  color: white;
+  background-color: darkgreen;
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+}
+
+.git{
+  color: white;
+  background-color: midnightblue;
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+}

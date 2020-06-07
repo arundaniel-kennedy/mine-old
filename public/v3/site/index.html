@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body style="margin:0px">
+    <canvas id="c"></canvas>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/light.js" charset="utf-8"></script>
+    <script src="js/dark.js" charset="utf-8"></script>
+    <script>
+    var c = document.getElementById("c");
+    var ctx = c.getContext("2d");
+
+    var type = 0;
+    var glow = 0;
+    var flick = 0;
+    var beacon = 0;
+
+    c.height = window.innerHeight;//y
+    c.width = window.innerWidth;//x
+    var build_width = c.width*0.2;
+    var build_height = c.height*0.2
+    var pole_height = c.height*0.7
+    var spacing = c.width*0.04;
+
+    var sun = new Image();
+    var moon = new Image();
+
+    function init() {
+      sun.src = 'js/images/sun.png';
+      moon.src = 'js/images/moon.png';
+      window.requestAnimationFrame(draw);
+    }
+
+    function getMousePosition(canvas, event) {
+           let rect = canvas.getBoundingClientRect();
+           let x = event.clientX - rect.left;
+           let y = event.clientY - rect.top;
+
+           if(x>c.width-110 && y<100){
+              if(type){
+                type = 0;
+              }else{
+                type = 1;
+              }
+           }else if(x<build_width && y>build_height){
+              glow++;
+           }else if(x>build_width+30 && x< build_width+150 && y>pole_height && y<pole_height+50){
+              flick++;
+           }
+     }
+
+     let canvasElem = document.querySelector("canvas");
+
+     canvasElem.addEventListener("mousedown", function(e)
+     {
+         getMousePosition(canvasElem, e);
+     });
+
+    function draw()
+    {
+      if(type){
+        night();
+      }else{
+        day();
+      }
+    }
+
+    init();
+
+    </script>
+
+  </body>
+</html>

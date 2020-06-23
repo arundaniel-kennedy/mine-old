@@ -1,85 +1,42 @@
-<html>
-	<head>
-		<title>My first three.js app</title>
-		<style>
-			body { margin: 0; }
-			canvas { display: block; }
-      #info {
-      	position: absolute;
-      	top: 10vh;
-      	width: 100%;
-      	text-align: center;
-      	z-index: 100;
-      	display:block;
-        font-size: 2rem;
-        color: white;
-      }
-		</style>
-	</head>
-	<body>
-    <div id="info">
-      This website is under re-construction,<br> Will take some time to finish !!!
-      <br><br>
-			Until then see my Old one's at <a href="https://old.arundanielk.com">old.arundanielk.com</a>
-			<br><br>
-      - Arun Daniel K
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Arun Daniel K | Developer!</title>
+  </head>
+  <body style="background-color:black">
+
+    <div class="container pt-5 mt-5">
+      <div class="jumbotron" style="background-color:transparent">
+        <p class="h1 text-center text-light">My Personal Websites</p><br><br>
+        <center>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+            <div class="card  p-2" style="width: 18rem;">
+              <img src="images/v31.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Version 3.1</h5>
+                <p class="card-text">The First version of my version 3 website.</p>
+                <a href="v3.1/" class="btn btn-outline-dark">Visit Website</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        </center>
+      </div>
     </div>
-		<script src="js/three.js"></script>
-		<script>
-			var scene = new THREE.Scene();
-			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
 
-			var renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			document.body.appendChild( renderer.domElement );
-
-			var geometry = new THREE.BoxGeometry();
-			var material = new THREE.LineDashedMaterial( { color: 0xffffff } );
-			var cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
-
-      var geometry = new THREE.BoxGeometry();
-			var material = new THREE.LineDashedMaterial( { color: 0xffff00 } );
-			var cube1 = new THREE.Mesh( geometry, material );
-			scene.add( cube1 );
-
-      var geometry = new THREE.BoxGeometry();
-			var material = new THREE.LineDashedMaterial( { color: 0xff00ff } );
-			var cube2 = new THREE.Mesh( geometry, material );
-			scene.add( cube2 );
-
-      var geometry = new THREE.BoxGeometry();
-			var material = new THREE.LineDashedMaterial( { color: 0x00ffff } );
-			var cube3 = new THREE.Mesh( geometry, material );
-			scene.add( cube3 );
-
-      camera.position.x = 0;
-      camera.position.y = 1;
-			camera.position.z = 5;
-
-			var animate = function () {
-				requestAnimationFrame( animate );
-
-				cube.rotation.x += 0.05;
-				cube.rotation.y += 0.05;
-        cube.rotation.z += 0.05;
-
-        cube1.rotation.x += 0.02;
-				cube1.rotation.y += 0.02;
-        cube1.rotation.z += 0.02;
-
-        cube2.rotation.x += 0.03;
-				cube2.rotation.y += 0.03;
-        cube2.rotation.z += 0.03;
-
-        cube3.rotation.x += 0.04;
-				cube3.rotation.y += 0.04;
-        cube3.rotation.z += 0.04;
-
-				renderer.render( scene, camera );
-			};
-
-			animate();
-		</script>
-	</body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
 </html>
